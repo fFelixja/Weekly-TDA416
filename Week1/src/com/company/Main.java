@@ -16,7 +16,8 @@ public class Main {
 
     private static void second(){
         Second second = new Second();
-        second.freakCount();
+        Path path = Paths.get("/Users/felixjansson/develop/Weekly-TDA416/Week1/src/com/company/txt");
+        second.freakCount(path);
     }
 
     public static void main(String[] args) {

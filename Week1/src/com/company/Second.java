@@ -1,7 +1,6 @@
 package com.company;
 
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
@@ -18,16 +17,79 @@ Texter på olika språk har en karaktäristisk frekvensfördelning (som jag inte
 Se om ni kan se någon skillnad på engelsk respektive svensk text genom att testa med någon lite större lämplig text på vardera språket.
  */
 public class Second {
+    //å 229
+    //ä 228
+    //ö 246
 
-    public void freakCount(){
-        String str = null;
-        StringBuffer sBuffer = new StringBuffer("/Users/felixjansson/develop/Weekly-TDA416/src/com/company/txt");
+    private int total;
 
-        try {
-            str = Files.lines(path, StandardCharsets.UTF_8).forEach();
+    public void freakCount(Path path){
+        int[] iArray = countChar(getChars(path));
+        print(iArray);
+
+    }
+
+    private void print(int[] iArray) {
+        System.out.println("Char\tTotal\tHz");
+        for (char i = 0; i < 26;i++){
+            if (iArray[i] > 0){
+                char c = (char)(i + 97);
+                double percent = (double) iArray[i]/total;
+                System.out.println(c + "\t\t" + iArray[i] + "\t\t" + percent);
+            }
+        }
+        for (char i = 26; i < 29; i++){
+            if (i == 26 && iArray[i] > 0){
+                double percent = (double)iArray[i]/total;
+                System.out.println("å\t\t" + iArray[i] + "\t\t" + percent);
+            } else if (i == 27 && iArray[i] > 0){
+                double percent = (double)iArray[i]/total;
+                System.out.println("ä\t\t" + iArray[i] + "\t\t" + percent);
+            } else if (i == 28 && iArray[i] > 0){
+                double percent =(double) iArray[i]/total;
+                System.out.println("ö\t\t" + iArray[i] + "\t\t" + percent);
+            }
+        }
+    }
+
+    private int[] countChar(char[] cArray){
+        int[] map = new int[29];
+        total = 0;
+        for (char i = 0 ; i < map.length; i++){
+            map[i] = 0;
+        }
+        for (char c : cArray){
+            if (c >= 97 && c <= 122){
+                map[c - 97]++;
+                total++;
+            }
+            switch (c) {
+                case 229:
+                    map[26]++;
+                    total++;
+                    break;
+                case 228:
+                    map[27]++;
+                    total++;
+                    break;
+                case 246:
+                    map[28]++;
+                    total++;
+                    break;
+            }
+        }
+        return map;
+    }
+
+    private char[] getChars(Path path){
+        byte[] fileArray = null;
+        try{
+            fileArray = Files.readAllBytes(path);
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-        System.out.println(str.to);
+        String tmp = new String(fileArray);
+        tmp = tmp.toLowerCase();
+        return tmp.toCharArray();
     }
 }
