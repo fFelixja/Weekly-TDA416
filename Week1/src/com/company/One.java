@@ -1,4 +1,3 @@
-package com.company;
 
 /*Skriv en metod som givet ett argument av typen int[], ett heltal samt ett index placerar in heltalet på den
 position som ges av indexet samt flyttar alla element i fältet med samma eller högre index ett steg ”uppåt".

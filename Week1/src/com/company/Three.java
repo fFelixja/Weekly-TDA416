@@ -1,4 +1,3 @@
-package com.company;
 
 /*
   a) Skriv en metod som givet två strängar flätar samman dem så att metoden först tar en bokstav från den ena strängen
