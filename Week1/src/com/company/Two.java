@@ -34,19 +34,19 @@ public class Two {
             if (iArray[i] > 0){
                 char c = (char)(i + 97);
                 double percent = (double) iArray[i]/total;
-                System.out.println(c + "\t\t" + iArray[i] + "\t\t" + percent);
+                System.out.println(c + "\t" + iArray[i] + "\t" + percent);
             }
         }
         for (char i = 26; i < 29; i++){
             if (i == 26 && iArray[i] > 0){
                 double percent = (double)iArray[i]/total;
-                System.out.println("å\t\t" + iArray[i] + "\t\t" + percent);
+                System.out.println("å\t" + iArray[i] + "\t" + percent);
             } else if (i == 27 && iArray[i] > 0){
                 double percent = (double)iArray[i]/total;
-                System.out.println("ä\t\t" + iArray[i] + "\t\t" + percent);
+                System.out.println("ä\t" + iArray[i] + "\t" + percent);
             } else if (i == 28 && iArray[i] > 0){
                 double percent =(double) iArray[i]/total;
-                System.out.println("ö\t\t" + iArray[i] + "\t\t" + percent);
+                System.out.println("ö\t" + iArray[i] + "\t" + percent);
             }
         }
     }
