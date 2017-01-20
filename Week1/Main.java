@@ -24,7 +24,11 @@ public class Main {
         String str1 = "annab";
         String str2 = "patrik";
         Three three = new Three();
+
+        /* Sunes B */
         three.recMergeString(str1,str2);
+
+        /* Lisch B */
         three.mergStringA(str1,str2);
         three.printMergeString(str1,str2);
     }

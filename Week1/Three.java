@@ -32,6 +32,8 @@ public class Three {
         System.out.println(string);
     }
 
+
+/* Sune Del B */
     public void recMergeString(String str1, String str2) {
       System.out.println(recMerge("", str1, str2));
     }
@@ -56,7 +58,7 @@ public class Three {
         return result;
     }
 
-/*Del B*/
+/* Lisch Del B */
     public void printMergeString(String str1, String str2){
       System.out.println(getMergeString(str1, str2));
     }
