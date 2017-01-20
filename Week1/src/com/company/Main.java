@@ -15,7 +15,8 @@ public class Main {
 
     private static void two(){
         Two two = new Two();
-        Path path = Paths.get(System.getProperty("user.dir") + "/src/com/company/txt");
+        //Path path = Paths.get(System.getProperty("user.dir") + "/src/com/company/txt");
+        Path path = Paths.get(System.getProperty("user.dir") + "/txt");
         two.freakCount(path);
     }
 
