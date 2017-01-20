@@ -24,10 +24,11 @@ public class Main {
         String str1 = "anna";
         String str2 = "patrik";
         Three three = new Three();
-        three.mergString(str1,str2);
+        three.mergStringA(str1,str2);
+        three.printMergeString(str1,str2);
     }
 
     public static void main(String[] args) {
-        two();
+        three();
     }
 }
