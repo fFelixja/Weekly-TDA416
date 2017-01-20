@@ -1,8 +1,5 @@
 package com.company;
 
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -84,7 +81,6 @@ public class Two {
         return map;
     }
 
-    @Nullable
     private char[] getChars(Path path){
         byte[] fileArray = null;
         try{
