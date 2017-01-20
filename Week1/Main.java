@@ -25,6 +25,8 @@ public class Main {
         String str2 = "patrik";
         Three three = new Three();
         three.recMergeString(str1,str2);
+        three.mergStringA(str1,str2);
+        three.printMergeString(str1,str2);
     }
 
     public static void main(String[] args) {
