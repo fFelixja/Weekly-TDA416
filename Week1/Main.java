@@ -21,13 +21,13 @@ public class Main {
     }
 
     private static void three(){
-        String str1 = "anna";
+        String str1 = "annab";
         String str2 = "patrik";
         Three three = new Three();
-        three.mergString(str1,str2);
+        three.recMergeString(str1,str2);
     }
 
     public static void main(String[] args) {
-        two();
+        three();
     }
 }
