@@ -1,5 +1,8 @@
 package com.company;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -16,7 +19,7 @@ Frekvensen anges i % och endast bokstäver som förekommer minst 1 gång tas med
 Texter på olika språk har en karaktäristisk frekvensfördelning (som jag inte kommer ihåg).
 Se om ni kan se någon skillnad på engelsk respektive svensk text genom att testa med någon lite större lämplig text på vardera språket.
  */
-public class Second {
+public class Two {
     //å 229
     //ä 228
     //ö 246
@@ -24,7 +27,7 @@ public class Second {
     private int total;
 
     public void freakCount(Path path){
-        int[] iArray = countChar(getChars(path));
+        int[] iArray = mapChar(getChars(path));
         print(iArray);
 
     }
@@ -52,7 +55,7 @@ public class Second {
         }
     }
 
-    private int[] countChar(char[] cArray){
+    private int[] mapChar(char[] cArray){
         int[] map = new int[29];
         total = 0;
         for (char i = 0 ; i < map.length; i++){
@@ -81,12 +84,14 @@ public class Second {
         return map;
     }
 
+    @Nullable
     private char[] getChars(Path path){
         byte[] fileArray = null;
         try{
             fileArray = Files.readAllBytes(path);
         } catch (IOException e) {
             System.out.println(e.getMessage());
+            return null;
         }
         String tmp = new String(fileArray);
         tmp = tmp.toLowerCase();

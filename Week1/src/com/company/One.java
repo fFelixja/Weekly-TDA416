@@ -8,7 +8,7 @@ För att kunna testa metoden kan det vara bra att använda Arrays.toString(int[]
 
 import java.util.Arrays;
 
-public class First {
+public class One {
 
     public void f(int[] arr, int a, int index){
 

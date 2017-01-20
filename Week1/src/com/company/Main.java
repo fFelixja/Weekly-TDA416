@@ -5,22 +5,29 @@ import java.nio.file.Paths;
 
 public class Main {
 
-    private static void first(){
+    private static void One(){
         int[] arr = {0,1,2,3,4,5,6,7} ;
         int index, a;
         a = 666;
         index = 2;
-        First first = new First();
-        first.f(arr,a,index);
+        One one = new One();
+        one.f(arr,a,index);
     }
 
-    private static void second(){
-        Second second = new Second();
+    private static void Two(){
+        Two two = new Two();
         Path path = Paths.get("/Users/felixjansson/develop/Weekly-TDA416/Week1/src/com/company/txt");
-        second.freakCount(path);
+        two.freakCount(path);
+    }
+
+    private static void three(){
+        String str1 = "anna";
+        String str2 = "patrik";
+        Three three = new Three();
+        three.mergString(str1,str2);
     }
 
     public static void main(String[] args) {
-        second();
+        three();
     }
 }
