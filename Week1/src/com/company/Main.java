@@ -5,7 +5,7 @@ import java.nio.file.Paths;
 
 public class Main {
 
-    private static void One(){
+    private static void one(){
         int[] arr = {0,1,2,3,4,5,6,7} ;
         int index, a;
         a = 666;
@@ -14,9 +14,9 @@ public class Main {
         one.f(arr,a,index);
     }
 
-    private static void Two(){
+    private static void two(){
         Two two = new Two();
-        Path path = Paths.get("/Users/felixjansson/develop/Weekly-TDA416/Week1/src/com/company/txt");
+        Path path = Paths.get(System.getProperty("user.dir") + "/src/com/company/txt");
         two.freakCount(path);
     }
 
@@ -28,6 +28,6 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        three();
+        two();
     }
 }
