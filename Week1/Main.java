@@ -33,7 +33,21 @@ public class Main {
         three.printMergeString(str1,str2);
     }
 
+    private static void four() {
+        Four four = new Four();
+        four.makeDate(2000, 3, 5);
+        four.printDate();
+        for (int i = 0; i < 5 ; i++) {
+          four.incYear();
+          four.printDate();
+          four.incMonth();
+          four.printDate();
+          four.incDay();
+          four.printDate();
+        }
+    }
+
     public static void main(String[] args) {
-        three();
+        four();
     }
 }
