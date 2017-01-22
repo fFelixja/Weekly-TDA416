@@ -21,12 +21,11 @@ public class Five {
   public int myRandom(int min, int max) {
     int nanoS = (int)System.nanoTime();
 
-    while (nanoS < min || nanoS > max) {
-      nanoS = nanoS%max;
-      if (nanoS < min) {
-        nanoS += min;
-      }
-    }
+    if (nanoS < 0) nanoS = -nanoS;
+
+    /* tar ut ett tal i intervallet [min, max] och försjuter det till rätt värde */
+    nanoS = nanoS%(max-min+1) + min;
+
 
     return nanoS;
   }

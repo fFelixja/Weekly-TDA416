@@ -49,10 +49,15 @@ public class Main {
 
     private static void five() {
       Five five = new Five();
-      five.tabel(0, 20, 500);
+      five.tabel(10, 30, 10000);
+    }
+
+    private static void six() {
+      Six six = new Six();
+      six.printAnswer(20, 5);
     }
 
     public static void main(String[] args) {
-        five();
+      six();
     }
 }
