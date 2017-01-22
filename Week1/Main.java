@@ -47,7 +47,12 @@ public class Main {
         }
     }
 
+    private static void five() {
+      Five five = new Five();
+      five.tabel(0, 20, 500);
+    }
+
     public static void main(String[] args) {
-        four();
+        five();
     }
 }
