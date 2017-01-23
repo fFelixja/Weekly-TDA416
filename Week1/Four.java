@@ -175,7 +175,6 @@ public class Four {
         case 4:   tmpDays += 31;
         case 3:   tmpDays += (year%4 == 0) ? 29 : 28;
         case 2:   tmpDays += 31;
-                  break;
       }
       return tmpDays;
 
