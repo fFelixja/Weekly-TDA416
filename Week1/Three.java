@@ -1,4 +1,4 @@
-
+import java.lang.StringBuilder;
 /*
   a) Skriv en metod som givet två strängar flätar samman dem så att metoden först tar en bokstav från den ena strängen
         sedan en från den andra ända tills någon sträng tar slut.
@@ -32,7 +32,33 @@ public class Three {
         System.out.println(string);
     }
 
-/*Del B*/
+
+/* Sune Del B */
+    public void recMergeString(String str1, String str2) {
+      System.out.println(recMerge("", str1, str2));
+    }
+
+    private String recMerge(String result, String str1, String str2) {
+
+
+        if (!str1.isEmpty()) {
+          result += str1.charAt(0);
+          str1 = str1.substring(1);
+        }
+        if (!str2.isEmpty()) {
+          result += str2.charAt(0);
+          str2 = str2.substring(1);
+        }
+
+        if (!str1.isEmpty() || !str2.isEmpty()) {
+          result = recMerge(result, str1, str2);
+
+        }
+
+        return result;
+    }
+
+/* Lisch Del B */
     public void printMergeString(String str1, String str2){
       System.out.println(getMergeString(str1, str2));
     }
