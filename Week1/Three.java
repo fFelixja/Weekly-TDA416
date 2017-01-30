@@ -69,14 +69,15 @@ public class Three {
 
     private char[] getCharArray(String str1, String str2){
       char[] cArray = new char[str1.length() + str2.length()];
-       char[] cStr1 = str1.toCharArray();
-       char[] cStr2 = str2.toCharArray();
-       createChar(cStr1,cStr2,0,0,cArray);
-       return cArray;
+      char[] cStr1 = str1.toCharArray();
+      char[] cStr2 = str2.toCharArray();
+      createChar(cStr1,cStr2,0,0,cArray);
+      return cArray;
 
     }
 
     private void createChar(char[] str1, char[] str2, int strIndex, int arrIndex, char[] cArray){
+
       if (strIndex < str1.length && strIndex < str2.length) {
         cArray[arrIndex++] = str1[strIndex];
         cArray[arrIndex++] = str2[strIndex++];

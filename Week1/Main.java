@@ -52,12 +52,20 @@ public class Main {
       five.tabel(10, 30, 10000);
     }
 
+    private static void fFive(){
+      Ffive five = new Ffive();
+      for (int i = 0; i < 30 ;i++ ) {
+        System.out.println(five.rand(10,20));
+        
+      }
+    }
+
     private static void six() {
       Six six = new Six();
       six.printAnswer(20, 5);
     }
 
     public static void main(String[] args) {
-      six();
+      fFive();
     }
 }
